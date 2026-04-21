@@ -173,7 +173,7 @@ function App() {
 
           const ground = platformBelow(x, y, l.radius, solidPlatforms);
 
-          if (!ground || state === 'falling') {
+          if (!ground) {
             if (skill === 'parachute') {
               vy = clamp(vy + WORLD.gravity * 0.35 * speedFactor, -5, 1.25);
             } else {
